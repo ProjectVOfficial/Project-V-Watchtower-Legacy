@@ -167,11 +167,12 @@ Configure Windows signing according to the certificate provider being used. Keep
 
 ## 9. Publish in this order
 
-1. Upload installers, portable ZIP, source ZIP, license, release notes, and signatures.
-2. Verify every public download checksum.
-3. Upload `project-v-release.json` for portable update discovery.
-4. Upload `latest.json` **last** so installed clients do not see an update before its artifact is available.
-5. Test the public URLs from a clean machine.
+1. Upload the Windows installer, MSI, portable / standalone build, release notes, and checksums.
+2. Upload the exact corresponding source for the same released build. The release page may emphasize executables, but the AGPL source-availability requirement still applies.
+3. Verify every public download checksum.
+4. Upload `project-v-release.json` for portable update discovery when used.
+5. Upload `latest.json` **last** so installed clients do not see an update before its artifact is available.
+6. Test the public URLs from a clean machine.
 
 ## 10. Rollback
 
@@ -215,7 +216,7 @@ For the initial release, connector logic remains bundled with the trusted applic
 Before public release:
 
 - Include `LICENSE`
-- Publish the matching source archive
+- Provide compliant access to the matching corresponding source for the exact released binary build
 - Preserve required notices and attribution
 - Document material changes
 - Review third-party provider terms
