@@ -1,108 +1,69 @@
-# Publishing the GitHub Release
+# Publishing Project V // Watchtower on GitHub
 
-## Recommended structure
+## Repository structure
 
-The normal Git repository contains documentation, issue templates, and the license.
+This repository is the public Project V // Watchtower documentation and release hub.
 
-The compiled `.exe`, `.msi`, source archive, and checksums are attached to a GitHub Release. They are not committed into ordinary Git history.
+The normal Git history contains documentation, attribution, issue templates, screenshots, and licensing information. Compiled Windows binaries belong in GitHub Releases rather than ordinary Git history.
 
-## Why use GitHub Releases?
+## Official repository
 
-GitHub Releases are designed to package software, release notes, and binary assets. GitHub CLI can create a release and upload assets in one command.
+`https://github.com/ProjectVOfficial/Project-V-Watchtower`
 
-## Step 1 — Extract this kit
+## Binary release assets
 
-Place the extracted kit inside the Project V source folder.
+A Windows release may include:
 
-Example:
+- NSIS installer
+- MSI installer
+- standalone / portable executable
+- checksum manifest
+- release notes
 
-```text
-E:\PROJECTS\worldmonitor-2.5.23\
-  Project-V-Watchtower-GitHub-Release-Kit-1.0.0\
-```
+The release page can visually emphasize the Windows executables.
 
-## Step 2 — Prepare output
+## AGPL corresponding source requirement
 
-From the Project V source folder:
+Watchtower is a substantially modified downstream AGPL-covered work.
+
+If Project V distributes object-code binaries, the corresponding source for the exact released build must also be made available in a compliant way.
+
+For GitHub download releases, the simplest release practice is:
+
+1. upload the Windows binaries;
+2. upload the exact corresponding-source archive for the same build;
+3. include the AGPL license and required upstream notices in that source archive;
+4. link [UPSTREAM_AND_LICENSE.md](../UPSTREAM_AND_LICENSE.md) from the release description.
+
+The source archive does not need to be the main or first download button, but it must remain available as required by the license.
+
+## Release review
+
+Before publishing a release:
+
+- confirm the release version and tag;
+- confirm installer filenames and architecture;
+- confirm the binaries were tested;
+- confirm checksums;
+- inspect the corresponding-source archive;
+- confirm no API keys, private databases, credentials, updater keys, or certificate private keys are present;
+- confirm `LICENSE`, `NOTICE.md`, and upstream attribution are included;
+- disclose unsigned status when applicable;
+- confirm the release description does not imply World Monitor endorsement.
+
+## GitHub-generated source archives
+
+GitHub automatically generates `Source code (zip)` and `Source code (tar.gz)` links for a tag.
+
+Those automatic archives only count as application corresponding source if the actual application source needed to build that release is present in this repository at that tag.
+
+Because the current public repository is documentation-focused, do not rely on the automatic tag archives as the Watchtower application source unless the repository layout changes.
+
+## Local repository remote
+
+After the repository transfer to ProjectVOfficial, local Watchtower clones should use:
 
 ```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File `
-  ".\Project-V-Watchtower-GitHub-Release-Kit-1.0.0\scripts\Prepare-ReleaseAssets.ps1" `
-  -ProjectRoot "E:\PROJECTS\worldmonitor-2.5.23"
+git remote set-url origin https://github.com/ProjectVOfficial/Project-V-Watchtower.git
+git remote -v
 ```
-
-The script creates:
-
-```text
-github-release-output\
-  repository\
-  release-assets\
-```
-
-Review both folders before publishing.
-
-## Step 3 — Install GitHub CLI
-
-```powershell
-winget install --id GitHub.cli
-```
-
-Close and reopen PowerShell if `gh` is not immediately recognized.
-
-## Step 4 — Authenticate
-
-```powershell
-gh auth login
-```
-
-Choose GitHub.com and follow the browser authentication flow.
-
-## Step 5 — Create repository and draft release
-
-Replace the repository owner:
-
-```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File `
-  ".\Project-V-Watchtower-GitHub-Release-Kit-1.0.0\scripts\Publish-GitHubRelease.ps1" `
-  -ProjectRoot "E:\PROJECTS\worldmonitor-2.5.23" `
-  -Repository "YOUR-GITHUB-USERNAME/Project-V-Watchtower"
-```
-
-By default, the script:
-
-1. Creates a new public repository.
-2. Commits and pushes the documentation.
-3. Creates tag `v1.0.0`.
-4. Creates a draft GitHub Release.
-5. Uploads the NSIS installer, MSI installer, source archive, and checksums.
-
-## Step 6 — Review the draft
-
-On GitHub:
-
-- Confirm the repository name and description.
-- Confirm README formatting.
-- Confirm the release is still marked Draft.
-- Confirm all four release assets are attached.
-- Confirm installer filenames.
-- Confirm `SHA256SUMS.txt`.
-- Confirm the corresponding source archive.
-- Confirm no secrets or private files appear.
-- Confirm the warning and unsigned-installer status.
-- Publish only after testing the downloaded assets on a clean Windows account or test machine.
-
-## Existing repository
-
-The provided publisher intentionally refuses to overwrite an existing repository. This protects against pushing into the wrong project.
-
-If the target repository already exists, publish the prepared `repository` folder manually or adapt the script only after checking the existing branch and remote.
-
-## GitHub automatic source links
-
-GitHub automatically displays “Source code (zip)” and “Source code (tar.gz)” for the tagged documentation repository.
-
-Those files are not the application source in this documentation-focused release structure.
-
-The release notes and README explicitly direct users to:
-
-`Project-V-Watchtower-1.0.0-Source.zip`
