@@ -1,66 +1,36 @@
-# Project V Watchtower 1.0.0
+# Project V // Watchtower v1.1.0-1
 
-## Initial Windows release
+## Windows reference build
 
-Project V Watchtower 1.0.0 establishes the first Project V-branded Windows release line.
+v1.1.0-1 is the current public Windows reference build of Project V // Watchtower.
 
-## Release assets
+### Added and expanded
 
-- `Project-V-Watchtower-1.0.0-Windows-x64-Setup.exe` — NSIS installer recommended for most users
-- `Project-V-Watchtower-1.0.0-Windows-x64.msi` — MSI package for managed or administrative deployment
-- `Project-V-Watchtower-1.0.0-Source.zip` — corresponding application source
-- `SHA256SUMS.txt` — release asset checksums
+- Map 2.0
+- Air Operations
+- Weather Operations
+- Severe Weather Intelligence
+- Tropical Operations
+- Camera Wall source management improvements
+- continued Research Library, Case Desk, Data Desk, OSINT, local AI, Analysis Room, Project Lock, backup, recovery, and diagnostics capabilities
+- Project V Watchtower packaging and release identity
 
-## Highlights
+### Packaging
 
-- Customizable command deck and workspaces
-- Live map and configured situational-awareness feeds
-- Research Library
-- Case Desk
-- Data Desk
-- Map Operations and geofenced alerts
-- Command Assistant with optional local Ollama
-- Multi-agent Analysis Room
-- Camera Wall
-- Communications Wall
-- Restricted Source Browser
-- OSINT Desk
-- Launch Deck
-- Plugin foundation with sandboxing and permissions
-- Project Lock
-- Backup, recovery, safe mode, and diagnostics
-- Network control modes
-- Voice-command and spoken-alert foundations
-- Project V branding and 1.0.0 release identity
+Public Windows assets include installer and executable formats for Windows x64.
 
-## Build validation
+### Security and signing
 
-The Windows production build completed successfully using:
+The current binaries are not Authenticode-signed and Watchtower has not undergone an independent security audit.
 
-- TypeScript type checking
-- Vite production bundling
-- Rust optimized release compilation
-- Tauri Windows packaging
-- NSIS bundle generation
-- MSI bundle generation
+### Upstream and licensing
 
-## Important warnings
+Watchtower is a substantially modified downstream work based on World Monitor.
 
-- Experimental pre-alpha
-- No independent security audit
-- Installers are not Authenticode-signed
-- Windows may display an unknown-publisher or SmartScreen warning
-- Automatic updater is not enabled in this unsigned local build
-- External feeds and providers may be unavailable or require API keys
-- AI-generated analysis may be incorrect
-- Some frontend chunks remain large and are a future optimization target
+Upstream authors retain copyright in their upstream contributions. Project V contributors retain copyright in original Project V-authored contributions. The covered combined work is distributed under **AGPL-3.0-only**.
 
-## Upgrade and compatibility note
+See [NOTICE.md](NOTICE.md) and [UPSTREAM_AND_LICENSE.md](UPSTREAM_AND_LICENSE.md).
 
-The first Project V release retains the existing application identifier to avoid silently abandoning compatible local storage, IndexedDB, credentials, cases, research records, and workspace state from the development line.
+### Corresponding source
 
-A future identifier migration should be performed only with a tested data-migration process.
-
-## License
-
-AGPL-3.0-only, with applicable upstream notices and corresponding source provided as a release asset.
+Distributed binaries require compliant access to corresponding source for the exact build under AGPL-3.0-only. The release page may emphasize executables while the source is supplied through a clearly linked compliant source location.
