@@ -4,7 +4,7 @@
 
 Project V // Watchtower is distributed under:
 
-`AGPL-3.0-only`
+`AGPL-3.0-or-later`
 
 The full GNU Affero General Public License v3 text is provided in [LICENSE](LICENSE).
 
@@ -36,11 +36,11 @@ Project V does not claim ownership of those upstream contributions.
 
 Project V contributors retain copyright in original Project V-authored modifications, additions, documentation, packaging, interface work, and other original material, subject to any assignments and third-party rights.
 
-Those original Project V contributions are nevertheless distributed as part of the combined covered work under AGPL-3.0-only.
+Those original Project V contributions are nevertheless distributed as part of the combined covered work under AGPL-3.0-or-later.
 
 ### Combined work
 
-When Project V distributes the modified Watchtower application as a combined work based on the AGPL-covered upstream program, the covered work as a whole remains subject to AGPL-3.0-only.
+When Project V distributes the modified Watchtower application as a combined work based on the AGPL-covered upstream program, the covered work as a whole remains subject to AGPL-3.0-or-later.
 
 See [NOTICE.md](NOTICE.md) for the project-level copyright and attribution statement.
 
