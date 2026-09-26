@@ -39,4 +39,4 @@ AI assistance does not remove the contributor's responsibility to understand, te
 
 ## License
 
-Contributions must be compatible with AGPL-3.0-only and applicable upstream licensing.
+Contributions must be compatible with AGPL-3.0-or-later and applicable upstream licensing.
