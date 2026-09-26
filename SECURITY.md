@@ -2,7 +2,7 @@
 
 ## Project status
 
-Project V Watchtower is experimental pre-alpha software and has not undergone an independent security audit.
+Project V // Watchtower is a current Windows reference build that has **not** undergone an independent security audit.
 
 Do not use it as the only protection for highly sensitive, classified, regulated, life-safety, or mission-critical information.
 
@@ -12,8 +12,8 @@ Do not publish exploit details, working proof-of-concept code, private keys, or 
 
 Preferred process:
 
-1. Use GitHub's private vulnerability reporting or Security Advisory feature if enabled for the repository.
-2. If private reporting is not enabled, open a minimal public issue stating that you need a private security contact. Do not include exploit details.
+1. Use GitHub private vulnerability reporting or a Security Advisory if enabled.
+2. If private reporting is not enabled, open a minimal public issue requesting a private security contact. Do not include exploit details.
 3. Include the affected version, operating system, impact, and the smallest safe reproduction description.
 4. Allow reasonable time for triage before public disclosure.
 
@@ -58,24 +58,24 @@ Depending on the enabled feature and runtime:
 - Last-known-good configuration
 - Protected backups using AES-GCM and PBKDF2-SHA256
 - Local blocked-request audit records
-- Installer and source SHA-256 checksums
+- Release checksum support
 
 ## Important limitations
 
 The application does not protect against:
 
-- A compromised Windows account or kernel
-- Malware with the user's privileges
-- Screen capture or keylogging malware
-- Stolen unlocked devices
-- Malicious firmware
-- Compromised provider accounts
-- Incorrect or poisoned external data
-- Social engineering
-- Weak user passphrases
-- Unreviewed third-party applications
-- Vulnerabilities in WebView2, Tauri, dependencies, or the application
-- Traffic outside the application's guarded frontend request paths
+- a compromised Windows account or kernel;
+- malware with the user's privileges;
+- screen capture or keylogging malware;
+- stolen unlocked devices;
+- malicious firmware;
+- compromised provider accounts;
+- incorrect or poisoned external data;
+- social engineering;
+- weak user passphrases;
+- unreviewed third-party applications;
+- vulnerabilities in WebView2, Tauri, dependencies, or the application;
+- traffic outside the application's guarded frontend request paths.
 
 Project Lock is an application privacy control, not full-disk encryption.
 
@@ -83,33 +83,29 @@ Emergency Disconnect primarily blocks new guarded frontend requests. Existing re
 
 ## Release integrity
 
-The current 1.0.0 installers are not Authenticode-signed.
+Current public Windows builds are not represented as Authenticode-signed.
 
 Users should:
 
-1. Download from the official GitHub Release.
-2. Compare the SHA-256 hash with `SHA256SUMS.txt`.
+1. Download only from the official ProjectVOfficial GitHub repository.
+2. Verify published checksums when provided.
 3. Treat unexpected filename, size, hash, publisher, or repository changes as suspicious.
 4. Preserve a known-good offline copy when appropriate.
-
-Future updater-enabled builds require a Tauri signing key. The updater private key must never be committed, included in a release archive, placed in `.env`, or disclosed in CI logs.
 
 ## Secret handling
 
 Never submit:
 
 - API keys
-- Passwords
+- passwords
 - OAuth tokens
 - `.env` files
-- Updater private keys
-- Authenticode certificates
-- Personal research databases
-- Private case evidence
-- Exact sensitive locations
-- Unredacted diagnostic archives
-
-The release preparation script excludes common secret filenames and refuses to publish without a license file, but maintainers must still inspect the generated source archive before release.
+- updater private keys
+- Authenticode certificate private keys
+- personal research databases
+- private case evidence
+- exact sensitive locations
+- unredacted diagnostic archives
 
 ## Dependency risk
 
@@ -117,4 +113,4 @@ Dependencies should be reviewed and updated deliberately. Automated forced upgra
 
 ## Supported versions
 
-Until a formal support policy is announced, only the newest published Project V Watchtower release should be considered actively reviewed.
+Until a formal support policy is announced, only the newest published Project V // Watchtower release should be considered actively reviewed.
