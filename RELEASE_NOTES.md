@@ -27,10 +27,10 @@ The current binaries are not Authenticode-signed and Watchtower has not undergon
 
 Watchtower is a substantially modified downstream work based on World Monitor.
 
-Upstream authors retain copyright in their upstream contributions. Project V contributors retain copyright in original Project V-authored contributions. The covered combined work is distributed under **AGPL-3.0-only**.
+Upstream authors retain copyright in their upstream contributions. Project V contributors retain copyright in original Project V-authored contributions. The covered combined work is distributed under **AGPL-3.0-or-later**.
 
 See [NOTICE.md](NOTICE.md) and [UPSTREAM_AND_LICENSE.md](UPSTREAM_AND_LICENSE.md).
 
 ### Corresponding source
 
-Distributed binaries require compliant access to corresponding source for the exact build under AGPL-3.0-only. The release page may emphasize executables while the source is supplied through a clearly linked compliant source location.
+Distributed binaries require compliant access to corresponding source for the exact build under AGPL-3.0-or-later. The release page may emphasize executables while the source is supplied through a clearly linked compliant source location.
