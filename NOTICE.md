@@ -30,7 +30,7 @@ This means that copyright ownership can remain distinct even though the code is 
 
 ## License of the combined covered work
 
-Project V // Watchtower is distributed as a covered combined work under the GNU Affero General Public License version 3, **AGPL-3.0-only**.
+Project V // Watchtower is distributed as a covered combined work under the GNU Affero General Public License version 3, **AGPL-3.0-or-later**.
 
 Project V's copyright in its original modifications does not make those modifications proprietary when they are distributed as part of this AGPL-covered combined work. The AGPL terms remain applicable to the covered work as a whole.
 
@@ -42,7 +42,7 @@ The names **Project V** and **Project V // Watchtower**, Project V logos, and ot
 
 This notice does not transfer ownership of upstream marks to Project V and does not claim endorsement by World Monitor or any upstream developer.
 
-Copyright licensing and trademark/branding rights are separate legal concepts. Nothing in this notice is intended to remove rights granted by AGPL-3.0-only or to add restrictions inconsistent with that license.
+Copyright licensing and trademark/branding rights are separate legal concepts. Nothing in this notice is intended to remove rights granted by AGPL-3.0-or-later or to add restrictions inconsistent with that license.
 
 ## Modification notice
 
