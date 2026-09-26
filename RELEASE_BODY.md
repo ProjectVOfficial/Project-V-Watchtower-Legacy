@@ -1,36 +1,49 @@
-Project V Watchtower 1.0.0 is the first experimental Windows release of the Project V situational-awareness and research command center.
+# Project V // Watchtower v1.1.0-1
 
-### Which installer should I use?
+**Platform:** Windows x64  
+**Release channel:** Windows reference build / production candidate
 
-- **Setup.exe** — recommended for most Windows users
-- **MSI** — intended for managed or administrative installation
+Project V // Watchtower is a local-first situational-awareness, mapping, research, case-management, and optional local-AI command center.
 
-### Before installing
+## Highlights
 
-1. Read the warning in the repository README.
-2. Download `SHA256SUMS.txt`.
-3. Verify the installer checksum.
-4. Expect an **Unknown publisher** or SmartScreen warning because this release is not Authenticode-signed.
+- Map 2.0 operational workflow
+- Air Operations with live ADS-B tracking, watchlists, trails, filters, and aircraft intelligence
+- Weather Operations with radar, forecasts, watched locations, and local history
+- Severe Weather Intelligence with official alerts and warning polygons
+- Tropical Operations using NOAA / NHC data
+- Camera Wall source management improvements
+- Research Library, Case Desk, Data Desk, and Map Operations
+- Optional local Ollama integration
+- Multi-agent Analysis Room
+- OSINT Desk and restricted research handoffs
+- Project Lock, backup, recovery, diagnostics, and safe mode
+- Project V packaging and Windows release identity
 
-### Optional local AI
+## Windows downloads
 
-Ollama is not included and is not required to open the program. Install and configure Ollama separately to use the local Command Assistant and Analysis Room.
+The release may include:
 
-### Important limitations
+- NSIS installer
+- MSI installer
+- standalone / portable executable
 
-- Experimental pre-alpha
-- No independent security audit
-- No anonymity guarantee
-- No automatic updater in this unsigned build
-- External feeds may require API keys or internet access
-- AI analysis is not evidence and may be incorrect
+## Important notes
 
-### Source and license
+- Current builds are not Authenticode-signed.
+- Windows may display SmartScreen or unknown-publisher warnings.
+- External feeds may be unavailable, rate-limited, or require provider credentials.
+- AI-generated analysis may be incorrect and is not independent evidence.
+- Watchtower has not undergone an independent security audit.
 
-The application is distributed under **AGPL-3.0-only** according to the project metadata. Use the attached:
+## Upstream and license
 
-`Project-V-Watchtower-1.0.0-Source.zip`
+Project V // Watchtower is a substantially modified downstream work based on World Monitor.
 
-for the corresponding application source.
+Upstream authors retain copyright in their upstream contributions. Project V contributors retain copyright in their original Project V-authored contributions. The covered combined work is distributed under **AGPL-3.0-only**.
 
-GitHub's automatically generated “Source code” archives on this release contain only the documentation repository, not the application source tree.
+See `NOTICE.md` and `UPSTREAM_AND_LICENSE.md`.
+
+## Source availability
+
+The public release page can emphasize the Windows executables, but corresponding source for the exact distributed build must remain available in accordance with AGPL-3.0-only.
