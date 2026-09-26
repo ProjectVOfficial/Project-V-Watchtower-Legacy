@@ -91,7 +91,7 @@ Copyright ownership is not collapsed into a single owner:
 
 - upstream authors retain copyright in their upstream contributions;
 - Project V contributors retain copyright in their original Project V-authored contributions, subject to any assignments or third-party rights;
-- the combined covered work is distributed under **AGPL-3.0-only**.
+- the combined covered work is distributed under **AGPL-3.0-or-later**.
 
 Project V does **not** claim ownership of upstream World Monitor code.
 
